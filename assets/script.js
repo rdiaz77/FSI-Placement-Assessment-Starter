@@ -19,7 +19,7 @@ let addSugar = document.getElementById('add-sugar')
 let updateGbCount = 0
 let updateCCcount = 0
 let updateSugarCount = 0
-
+let total = 0
 
 // Code to update name display 
 document.getElementById('credit').textContent = `Created by ${yourName}`
@@ -32,7 +32,10 @@ addGinger.addEventListener('click', function() {
 
     
     updateGbCount++;
-    console.log(updateGbCount)
+    total++;
+    // console.log(updateGbCount)
+    document.getElementById('qty-gb').innerHTML = (updateGbCount);
+    document.getElementById('qty-total').innerHTML = (total);
    }
     // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
 })
@@ -42,7 +45,10 @@ minusGinger.addEventListener('click', function(){
     if(updateGbCount > 0){
 
         updateGbCount --; 
-        console.log(updateGbCount)
+        total--;
+        // console.log(updateGbCount)
+        document.getElementById('qty-gb').innerHTML = (updateGbCount);
+        document.getElementById('qty-total').innerHTML = (total);
     }
 
 
@@ -55,7 +61,10 @@ minusGinger.addEventListener('click', function(){
 
     
     updateCCcount++;
-    console.log(updateCCcount)
+    total++;
+    // console.log(updateCCcount)
+    document.getElementById('qty-cc').innerHTML = (updateCCcount);
+    document.getElementById('qty-total').innerHTML = (total);
     
    }
 
@@ -66,8 +75,11 @@ minusCC.addEventListener('click', function(){
     if(updateCCcount > 0){
 
         updateCCcount --; 
+        total--;
+        document.getElementById('qty-cc').innerHTML = (updateCCcount);
+        document.getElementById('qty-total').innerHTML = (total);
 
-        console.log(updateCCcount)
+        // console.log(updateCCcount)
     }
 
 
@@ -81,7 +93,10 @@ addSugar.addEventListener('click', function() {
  
      
      updateSugarCount++;
-     console.log(updateSugarCount)
+     total++;
+    //  console.log(updateSugarCount)
+    document.getElementById('qty-sugar').innerHTML = (updateSugarCount);
+    document.getElementById('qty-total').innerHTML = (total);
      
     }
  
@@ -92,9 +107,13 @@ addSugar.addEventListener('click', function() {
      if(updateSugarCount > 0){
  
          updateSugarCount --; 
- 
-         console.log(updateSugarCount)
+         total--;
+         document.getElementById('qty-sugar').innerHTML = (updateSugarCount);
+         document.getElementById('qty-total').innerHTML = (total);
+        //  console.log(updateSugarCount)
 
 
      }
     })
+
+    
